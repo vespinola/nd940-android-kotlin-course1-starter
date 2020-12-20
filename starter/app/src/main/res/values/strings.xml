@@ -7,6 +7,24 @@
     <string name="enter_your_password">Enter your password</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_title">Welcome to the Shoe Store!</string>
+    <string name="welcome_explanation">The Shoe Store steps ahead of our competitors by bringing the best deals on the hottest brands for the whole family!</string>
+    <string name="welcome_see_instructions">See Instructions</string>
+    <string name="instruction_title">Instructions</string>
+    <string name="instruction_subtitle">
+        1. Add a new shoe with the floating button\n2. Select a shoe in the list and see its details
+    </string>
+    <string name="instruction_see_list">See Shoe List</string>
+    <string name="shoe_list_add">Add</string>
+
+    <string name="shoe_name">Shoe Name</string>
+    <string name="enter_shoe_name">Enter shoe name</string>
+    <string name="company_name">Company</string>
+    <string name="enter_company">Enter company</string>
+    <string name="shoe_size">Size</string>
+    <string name="enter_shoe_size">Enter shoe size</string>
+    <string name="shoe_description">Shoe Description</string>
+    <string name="enter_shoe_description">Enter shoe description</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
 </resources>

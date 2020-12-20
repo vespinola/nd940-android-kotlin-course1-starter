@@ -20,8 +20,8 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment =
                 supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
         val navController: NavController = navHostFragment.navController
-//        NavigationUI.setupActionBarWithNavController(this, navController)
-
+        NavigationUI.setupActionBarWithNavController(this, navController)
+        appBarConfiguration = AppBarConfiguration(navController.graph)
         Timber.plant(Timber.DebugTree())
     }
 

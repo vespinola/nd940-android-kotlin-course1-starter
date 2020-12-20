@@ -27,4 +27,12 @@
     <string name="enter_shoe_description">Enter shoe description</string>
     <string name="save">Save</string>
     <string name="cancel">Cancel</string>
+
+    <string name="title_login">Shoe Shore</string>
+    <string name="title_welcome">Welcome</string>
+    <string name="title_instructions">Instructions</string>
+    <string name="title_shoe_list">Shoe List</string>
+    <string name="title_detail">Detail</string>
+
+
 </resources>

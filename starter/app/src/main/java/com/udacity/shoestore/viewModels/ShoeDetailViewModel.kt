@@ -20,15 +20,17 @@ class ShoeDetailViewModel: ViewModel() {
     val desc: LiveData<String>
         get() = _desc
 
-    private val _size = MutableLiveData<Double>()
-    val size: LiveData<Double>
+    private val _size = MutableLiveData<String>()
+    val size: LiveData<String>
         get() = _size
 
-    val shoe: MediatorLiveData<Shoe> = MediatorLiveData()
-
-    init {
-        shoe.addSource(name, Observer {
-
-        })
+    fun addShoe() {
+        Shoe(
+            name = name.value ?: "",
+            company = company.value ?: "",
+            size = size.value?.toDouble() ?: 0.0,
+            description = desc.value ?: "",
+        )
     }
+
 }

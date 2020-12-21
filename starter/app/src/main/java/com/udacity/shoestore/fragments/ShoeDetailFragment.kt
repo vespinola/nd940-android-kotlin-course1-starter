@@ -10,7 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeDetailBinding
 import com.udacity.shoestore.models.Shoe
-import com.udacity.shoestore.viewModels.ShoeListViewModel
+import com.udacity.shoestore.viewModels.ActivityViewModel
 
 class ShoeDetailFragment : Fragment() {
 
@@ -25,15 +25,8 @@ class ShoeDetailFragment : Fragment() {
             false
         )
 
-
         binding.saveButton.setOnClickListener {
-            val shoe = Shoe(
-                "",
-                0.0,
-                "",
-                "",
-            )
-            findNavController().navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment(shoe))
+            findNavController().navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment())
         }
 
         binding.cancelButton.setOnClickListener {

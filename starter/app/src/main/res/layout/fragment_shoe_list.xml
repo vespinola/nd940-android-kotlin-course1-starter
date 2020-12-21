@@ -10,12 +10,10 @@
             android:layout_height="wrap_content">
 
             <LinearLayout
+                android:id="@+id/itemContainer"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-
-            </LinearLayout>
+                android:layout_height="wrap_content" />
         </ScrollView>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton

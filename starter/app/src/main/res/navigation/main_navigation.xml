@@ -56,10 +56,20 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_right"
             app:popExitAnim="@anim/slide_out_left" />
+        <argument
+            android:name="newShoe"
+            app:nullable="true"
+            android:defaultValue="@null"
+            app:argType="com.udacity.shoestore.models.Shoe" />
     </fragment>
     <fragment
         android:id="@+id/shoeDetailFragment"
         android:name="com.udacity.shoestore.fragments.ShoeDetailFragment"
         android:label="@string/title_detail"
-        tools:layout="@layout/fragment_shoe_detail" />
+        tools:layout="@layout/fragment_shoe_detail" >
+        <action
+            android:id="@+id/action_shoeDetailFragment_to_shoeListFragment"
+            app:destination="@id/shoeListFragment"
+            app:popUpTo="@id/shoeListFragment" />
+    </fragment>
 </navigation>

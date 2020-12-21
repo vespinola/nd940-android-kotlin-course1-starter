@@ -5,16 +5,42 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
+import com.udacity.shoestore.databinding.FragmentShoeDetailBinding
+import com.udacity.shoestore.models.Shoe
+import com.udacity.shoestore.viewModels.ShoeListViewModel
 
 class ShoeDetailFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_shoe_detail, container, false)
+    ): View {
+        val binding: FragmentShoeDetailBinding = DataBindingUtil.inflate(
+            inflater,
+            R.layout.fragment_shoe_detail,
+            container,
+            false
+        )
+
+
+        binding.saveButton.setOnClickListener {
+            val shoe = Shoe(
+                "",
+                0.0,
+                "",
+                "",
+            )
+            findNavController().navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment(shoe))
+        }
+
+        binding.cancelButton.setOnClickListener {
+            findNavController().popBackStack()
+        }
+
+        return binding.root
     }
 
 }

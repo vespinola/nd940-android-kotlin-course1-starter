@@ -9,7 +9,6 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
-import com.udacity.shoestore.databinding.FragmentLoginBinding
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
 import com.udacity.shoestore.viewModels.ShoeListViewModel
 

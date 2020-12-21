@@ -126,13 +126,13 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/signInButton"
+                android:id="@+id/saveButton"
                 android:text="@string/save"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <Button
-                android:id="@+id/signUpButton"
+                android:id="@+id/cancelButton"
                 android:text="@string/cancel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -5,9 +5,11 @@ import androidx.fragment.app.Fragment
 import android.os.Bundle
 import android.view.*
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.databinding.FragmentLoginBinding
 import com.udacity.shoestore.R
+import com.udacity.shoestore.viewModels.LoginState
 import com.udacity.shoestore.viewModels.LoginViewModel
 
 class LoginFragment : Fragment() {
@@ -29,12 +31,25 @@ class LoginFragment : Fragment() {
 
         viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
 
+        viewModel.loginFormState.observe(viewLifecycleOwner, Observer { state ->
+            when(state) {
+                LoginState.SIGN_UP -> {
+                    findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
+                }
+                else -> {
+                    findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToShoeListFragment())
+                }
+            }
+
+//            viewModel.complete()
+        })
+
         binding.signInButton.setOnClickListener {
-            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
+            viewModel.doSignIn()
         }
 
         binding.signUpButton.setOnClickListener {
-            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
+            viewModel.doSignUp()
         }
 
         setHasOptionsMenu(true)

@@ -40,8 +40,6 @@ class LoginFragment : Fragment() {
                     findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToShoeListFragment())
                 }
             }
-
-//            viewModel.complete()
         })
 
         binding.signInButton.setOnClickListener {

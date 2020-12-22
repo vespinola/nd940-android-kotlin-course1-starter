@@ -4,7 +4,7 @@
     <data>
         <variable
             name="shoeDetailViewModel"
-            type="com.udacity.shoestore.viewModels.ShoeDetailViewModel" />
+            type="com.udacity.shoestore.viewModels.ActivityViewModel" />
     </data>
 
     <LinearLayout
@@ -34,7 +34,6 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="24dp"
-                android:text="@{shoeDetailViewModel.name}"
                 android:autofillHints="@string/enter_your_email"
                 android:hint="@string/enter_shoe_name"
                 android:inputType="textEmailAddress"
@@ -63,7 +62,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="8dp"
-                android:text="@{shoeDetailViewModel.company}"
                 android:layout_marginEnd="24dp"
                 android:autofillHints="@string/enter_your_email"
                 android:hint="@string/enter_company"
@@ -93,7 +91,6 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="24dp"
-                android:text="@{shoeDetailViewModel.size.toString()}"
                 android:autofillHints="@string/enter_your_email"
                 android:hint="@string/enter_shoe_size"
                 android:inputType="numberDecimal"
@@ -122,7 +119,6 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="24dp"
-                android:text="@{shoeDetailViewModel.desc}"
                 android:autofillHints="@string/enter_your_email"
                 android:hint="@string/enter_shoe_description"
                 android:inputType="textEmailAddress"

@@ -7,11 +7,17 @@ import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
+import com.udacity.shoestore.databinding.ItemShoeBinding
+import com.udacity.shoestore.viewModels.ActivityViewModel
 
 class ShoeListFragment : Fragment() {
+    private val viewModel: ActivityViewModel by activityViewModels()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -39,8 +45,27 @@ class ShoeListFragment : Fragment() {
                 // Leave empty do disable back press.
             }
         }
+
+        viewModel.shoeList.observe(viewLifecycleOwner, Observer { list ->
+            list.forEach { currentShoe ->
+                val itemView: ItemShoeBinding = DataBindingUtil.inflate(
+                    inflater,
+                    R.layout.item_shoe,
+                    container,
+                    false
+                )
+
+                itemView.name.text = currentShoe.name
+                itemView.company.text = currentShoe.company
+                itemView.size.text = currentShoe.size.toString()
+                itemView.desc.text = currentShoe.description
+
+                binding.itemContainer.addView(itemView.root)
+            }
+        })
+
         requireActivity().onBackPressedDispatcher.addCallback(
-            this,  // LifecycleOwner
+            viewLifecycleOwner,
             callback
         )
 

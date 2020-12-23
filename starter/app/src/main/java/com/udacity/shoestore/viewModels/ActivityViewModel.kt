@@ -18,7 +18,7 @@ class ActivityViewModel: ViewModel() {
         _shoeList.value?.add(shoe)
     }
 
-    fun createShoeList() : MutableList<Shoe> {
+    private fun createShoeList() : MutableList<Shoe> {
         return mutableListOf(
             Shoe(
                 "Viamo",

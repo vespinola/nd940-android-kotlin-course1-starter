@@ -12,7 +12,7 @@
     <string name="welcome_see_instructions">See Instructions</string>
     <string name="instruction_title">Instructions</string>
     <string name="instruction_subtitle">
-        1. Add a new shoe with the floating button\n2. Select a shoe in the list and see its details
+        1. See the shoe list\n2. Add a new shoe with the floating button.
     </string>
     <string name="instruction_see_list">See Shoe List</string>
     <string name="shoe_list_add">Add</string>
@@ -35,5 +35,4 @@
     <string name="title_detail">Detail</string>
 
     <string name="menu_logout">Logout</string>
-    <string name="size_format">%d</string>
 </resources>

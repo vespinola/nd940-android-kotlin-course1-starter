@@ -23,26 +23,26 @@ class ActivityViewModel: ViewModel() {
             Shoe(
                 "Viamo",
                 4.3,
-                "Viamo",
-                "Viamo"
+                "Viamo Company",
+                "Viamo Description"
             ),
             Shoe(
                 "Natacha",
                 3.3,
-                "Natacha",
-                "Natacha"
+                "Natacha Company",
+                "Natacha Description"
             ),
             Shoe(
                 "Briganti",
                 6.3,
                 "Briganti",
-                "Briganti"
+                "Briganti Description"
             ),
             Shoe(
                 "Ferraro",
                 7.2,
-                "Ferraro",
-                "Ferraro"
+                "Ferraro Company",
+                "Ferraro Description"
             ),
         )
     }

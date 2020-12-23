@@ -35,11 +35,16 @@ class LoginFragment : Fragment() {
             when(state) {
                 LoginState.SIGN_UP -> {
                     findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
+                    viewModel.complete()
                 }
-                else -> {
+                LoginState.SIGN_IN -> {
                     findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToShoeListFragment())
+                    viewModel.complete()
                 }
+                else -> {}
             }
+
+
         })
 
         binding.signInButton.setOnClickListener {

@@ -8,6 +8,11 @@
             name="loginViewModel"
             type="com.udacity.shoestore.viewModels.LoginViewModel" />
     </data>
+    <!--
+    In the future, the login fragment could be more complex and,
+    because of that, I tried to avoid nested View Groups,
+    mostly common with LinearLayout.
+    -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
@@ -18,6 +23,10 @@
         android:paddingBottom="@dimen/fragment_vertical_margin"
         tools:context=".fragments.LoginFragment">
 
+        <!--
+        I preferred LinearLayout for these cases:
+        One view below the another
+        -->
         <LinearLayout
             android:id="@+id/emailContainer"
             android:layout_width="match_parent"

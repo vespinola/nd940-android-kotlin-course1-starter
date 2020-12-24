@@ -2,6 +2,10 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!--
+    My objective was to display a simple view per shoe.
+    LinearLayout is the easier view group, in my case.
+    -->
     <LinearLayout
         android:background="@color/itemBackground"
         android:layout_width="match_parent"

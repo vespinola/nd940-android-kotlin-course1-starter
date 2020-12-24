@@ -8,6 +8,12 @@
             type="com.udacity.shoestore.models.Shoe" />
     </data>
 
+    <!--
+    LinearLayout was choose considering if we have to change one View Group position.
+    All we need to do is to cut and paste one of them and put it in a different place,
+    inside the main linear layout.
+    -->
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"

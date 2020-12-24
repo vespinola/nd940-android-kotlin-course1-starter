@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+    This is not a complex view. I preferred linearLayout
+    instead of constraint layout, because I imagined the textViews
+    and the button one below the other.
+    -->
+
     <LinearLayout
         android:id="@+id/welcomeContainer"
         android:orientation="vertical"
